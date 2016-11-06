@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'find_matches',
     'QA',
+    'adviseher',
 ]
 
 MIDDLEWARE = [
@@ -76,21 +77,23 @@ WSGI_APPLICATION = 'adviseher.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+
 '''
-config_filepath = 'adviseher/config.txt'
+config_filepath = 'config.txt'
 with open(config_filepath) as config:
-    user, passwrd = config.readline().strip().split()
+    user, passwrd = config.readline().strip().split(',')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '/cloudsql/hardy-tenure-148700:us-central1:adviseher',
         'NAME': 'adv_db',
-        'PASSWORD': user,
-        'USER': passwrd,
+        'PASSWORD': passwrd,
+        'USER': user,
     }
 }
 '''
+
 
 
 
