@@ -1,6 +1,9 @@
 <h1>{{ question.question_text }}</h1>
+<li>{{ question.upvotes }}</li>
 <ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
+{% for answer in question.answer_set.all %}
+    <li>{{ answer.answer_text }}</li>
+    <li>{{ answer.user }}</li>
+    <li>{{ answer.upvotes }} </li>
 {% endfor %}
 </ul>
