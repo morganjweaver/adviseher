@@ -78,24 +78,12 @@ WSGI_APPLICATION = 'adviseher.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-'''
-config_filepath = 'config.txt'
-with open(config_filepath) as config:
-    user, passwrd = config.readline().strip().split(',')
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '/cloudsql/hardy-tenure-148700:us-central1:adviseher',
-        'NAME': 'adv_db',
-        'PASSWORD': passwrd,
-        'USER': user,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-'''
-
-
-
 
 
 # Password validation
