@@ -1,2 +1,4 @@
 # Covers JetBrains IDEs:
 *.idea
+*.config
+*.pyc
