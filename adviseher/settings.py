@@ -74,12 +74,11 @@ WSGI_APPLICATION = 'adviseher.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
+'''
 config_filepath = 'adviseher/config.txt'
 with open(config_filepath) as config:
     user, passwrd = config.readline().strip().split()
-    print user, passwrd
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
